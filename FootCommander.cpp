@@ -10,8 +10,8 @@ void FootCommander::attack(vector<vector<Soldier*>> &b, pair<int,int> location)
     int x = location.first;
     int y = location.second;
     FootSoldier* s;
-    FootSoldier* me = b[x][y]; //?
-    me->attack(b, location);
+    FootSoldier me = FootSoldier(b[x][y]); //?
+    me.attack(b, location);
     for(int i = 0; i < b.size(); ++i)
     {
 		for(int j = 0; j < b[i].size(); ++j)

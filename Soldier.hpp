@@ -18,7 +18,8 @@ protected:
 
 public:
     Soldier (uint num, int hp, int max, int damage, string type) : player_number(num), healthPoints(hp), maxHP(max), damage(damage), type(type) {}
-    
+    Soldier(Soldier* s): player_number(s->player_number), healthPoints(s->healthPoints), maxHP(s->maxHP), damage(s->damage), type(s->type) {}
+
     int getPlayer_number() { return player_number; }
     int getHp() { return healthPoints; }
     void setHp(int hp) { healthPoints = hp; }
