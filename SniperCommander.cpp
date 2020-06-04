@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include "SniperCommander.hpp"
-#include "Sniper.hpp"
 
 using namespace std;
 

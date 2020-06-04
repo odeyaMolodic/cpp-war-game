@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include "ParamedicCommander.hpp"
-#include "Paramedic.hpp"
 
 using namespace std;
 
