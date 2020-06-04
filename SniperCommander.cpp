@@ -15,11 +15,13 @@ void SniperCommander::attack(vector<vector<Soldier*>> &b, pair<int,int> location
     {
 		for(int j = 0; j < b[i].size(); ++j)
         {
-            s = Sniper(b[i][j]);
-            if(s != nullptr && s.getType() == "Sniper" && s.getPlayer_number() == me.getPlayer_number())
-            {
-                pair<int,int> index = make_pair(i ,j);
-                s.attack(b, index);
+            if(b[i][j] != nullptr) {
+                s = Sniper(b[i][j]);
+                if(s.getType() == "Sniper" && s.getPlayer_number() == me.getPlayer_number())
+                {
+                    pair<int,int> index = make_pair(i ,j);
+                    s.attack(b, index);
+                }
             }
         }
     }
