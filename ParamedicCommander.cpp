@@ -9,7 +9,6 @@ void ParamedicCommander::attack(vector<vector<Soldier*>> &b, pair<int,int> locat
 {
     int x = location.first;
     int y = location.second;
-    Paramedic s;
     Paramedic me = Paramedic(b[x][y]);
     me.attack(b, location);
     for(int i = 0; i < b.size(); ++i)
@@ -17,7 +16,7 @@ void ParamedicCommander::attack(vector<vector<Soldier*>> &b, pair<int,int> locat
 		for(int j = 0; j < b[i].size(); ++j)
         {
             if(b[i][j] != nullptr) {
-                s = Paramedic(b[i][j]);
+                Paramedic s = Paramedic(b[i][j]);
                 if(s.getType() == "Paramedic" && s.getPlayer_number() == me.getPlayer_number())
                 {
                     pair<int,int> index = make_pair(i ,j);
