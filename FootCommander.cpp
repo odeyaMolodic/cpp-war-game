@@ -18,7 +18,7 @@ void FootCommander::attack(vector<vector<Soldier*>> &b, pair<int,int> location)
         {
             if(b[i][j] != nullptr) {
                 s = FootSoldier(b[i][j]);
-                if(s != nullptr && s.getType() == "FootSoldier" && s.getPlayer_number() == me.getPlayer_number())
+                if(s.getType() == "FootSoldier" && s.getPlayer_number() == me.getPlayer_number())
                 {
                     pair<int,int> index = make_pair(i ,j);
                     s.attack(b, index);
