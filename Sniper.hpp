@@ -8,6 +8,6 @@ class Sniper: public Soldier
 {
 public:
 
-    Sniper(uint num, int hp=100, int damage=50) : Soldier(num, hp, damage) {}
+    Sniper(uint num, int hp=100, int max=100, int damage=50, string type="Sniper") : Soldier(num, hp, max, damage, type) {}
     void attack(vector<vector<Soldier*>> &b, pair<int,int> location);
 };

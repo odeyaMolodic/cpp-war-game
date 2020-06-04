@@ -28,7 +28,7 @@ namespace WarGame {
 		 */
 		uint play(); 
 
- 		/**
+		/**
 		 * The destructor deletes the soldiers from the board.
 		 */
 		~DemoGame();

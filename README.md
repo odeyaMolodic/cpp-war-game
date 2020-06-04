@@ -1,3 +1,5 @@
+![wargame](https://user-images.githubusercontent.com/57438349/82753692-42efed80-9dd0-11ea-854f-90d91362b3a9.png)
+
 <div dir="rtl" lang="he">
 
 # משחק מלחמה - שלב א
@@ -28,8 +30,8 @@
 * FootCommander: initial health points=150, damage per activity=20.
 * Sniper: initial health points=100, damage per activity=50.
 * SniperCommander: initial health points=120, damage per activity=100.
-* Paramedic: initial health points=100, health per activity=full.
-* ParamedicCommander: initial health points=200, health per activity=full.
+* Paramedic: initial health points=100, health per activity=50.
+* ParamedicCommander: initial health points=200, health per activity=100.
 
 ## מחלקות
 
@@ -41,21 +43,6 @@ Board
 DemoGame.
 
 אתם יכולים להשתמש בו כדוגמה ולבנות משחקים מורכבים יותר.
-
-
-## תנועה
-תנועה של דמות תבצע את השינוי הבא.
-
-אם נקודות המוצא של השחקן היא
-(x,y).
-
-אזי בתנועה up תשתנה ל
-(x+1,y).
-
-ובתנועה right תשתנה ל
-(x,y+1).
-
-היגיון הפוך עבור מטה, ושמאלה.
 
 
 ## הגשה
