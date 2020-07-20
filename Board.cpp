@@ -57,7 +57,8 @@ namespace WarGame {
                 target= make_pair(source.first, source.second-1);
                 break;
         }
-        if(target.first >= board.size() || target.first < 0 || target.second >= board.size() || target.second < 0) 
+        if(target.first >= board.size() || target.first < 0 || target.second >= board[0].size() || target.second < 0) 
+        // if(target.first >= board.size() || target.first < 0 || target.second >= board.size() || target.second < 0) 
 			throw invalid_argument("Outside of the board");
         Soldier* s = (*this)[target];
         // There is already another soldier (of this or the other player) in the target location
@@ -67,6 +68,7 @@ namespace WarGame {
         }
         (*this)[source] = nullptr;
 		(*this)[target] = soldier;
+        cout << "call attack" << endl;
         soldier->attack(board, target);
     }
 

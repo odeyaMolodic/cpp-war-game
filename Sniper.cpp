@@ -12,6 +12,8 @@ void Sniper::attack(vector<vector<Soldier*>> &b, pair<int,int> location)
     int hp = 0;
     Soldier* s;
     Soldier* enemy;
+    int enemyX = 0;
+    int enemyY = 0;
     Soldier* me = b[x][y];
     for(int i = 0; i < b.size(); ++i)
     {
@@ -24,6 +26,8 @@ void Sniper::attack(vector<vector<Soldier*>> &b, pair<int,int> location)
                 {
                     max = hp;
                     enemy = b[i][j];
+                    enemyX = i;
+                    enemyY = j;
                 }
 		}
 	}
@@ -32,6 +36,6 @@ void Sniper::attack(vector<vector<Soldier*>> &b, pair<int,int> location)
     enemy->setHp(health-damage);
     if(!enemy->isAlive())
     {
-        delete enemy;
+        b[enemyX][enemyY] = nullptr;
     }
 }
